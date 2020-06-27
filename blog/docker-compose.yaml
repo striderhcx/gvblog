@@ -1,0 +1,27 @@
+version: '2'
+services:
+  mysql:
+    network_mode: "bridge"
+    volumes:
+      - ./dbdump/mysqldata:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: "666"
+      MYSQL_USER: 'root'
+      MYSQL_PASS: '666'
+    image: blog-mysql
+    container_name: blog-mysql
+    restart: always
+    ports:
+      - "13306:3306"
+
+  web:
+    network_mode: "bridge"
+    image: blog-web
+    restart: always
+    container_name: blog-web
+    depends_on:
+      - mysql
+    links:
+      - mysql
+    ports:
+      - "9999:9999"

@@ -1,0 +1,10 @@
+.vscode
+*.swp
+*.idea
+blog/web.log
+blog/app.log
+blog/main
+blog/dbdump
+
+blog_front/node_modules
+blog_front/dist

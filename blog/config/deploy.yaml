@@ -1,0 +1,23 @@
+# 正式环境配置
+redis:
+  host: '127.0.0.1'
+  port: 6379
+  password: ""
+  url: ""
+  maxIdle: 10
+  maxActive: 10
+
+mysql:
+  host: '127.0.0.1'
+  port: 3306 
+  user: "root"
+  password: "hardtoguess"
+
+env:
+  mode: "product"
+  TokenSecret: "123456789"
+  TokenMaxAge: 604800
+  PassSalt: "your password salt"
+
+# 写代码解析include测试环境配置, 覆盖正式环境同名配置
+include: ["config/local.yaml"]
