@@ -3,7 +3,11 @@
 体验地址：
 
 http://120.78.76.74/ihxnblog
+
 ```
+### 预览
+
+![image](https://github.com/striderhcx/gvblog/blob/master/gvblog.gif)
 
 ### golang + vue搭建的支持markdown和代码高亮的小blog
 
